@@ -1,0 +1,75 @@
+# ==========================================
+# General / OS
+# ==========================================
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.log
+
+# ==========================================
+# Secrets & Credentials (CRITICAL)
+# ==========================================
+.env
+.env.*
+*.pem
+secrets.json
+
+# ==========================================
+# Python AI Service
+# ==========================================
+# Environments
+.venv/
+venv/
+env/
+ENV/
+
+# Compiled object files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# PyTest / Coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Machine Learning & Data (Don't commit heavy files!)
+python-ai-service/model_store/*.joblib
+python-ai-service/model_store/*.pt
+python-ai-service/model_store/*.bin
+python-ai-service/model_store/*.safetensors
+python-ai-service/dataset/*.csv
+python-ai-service/dataset/*.json
+python-ai-service/dataset/*.parquet
+
+# Keep the empty directories so the structure remains intact
+!python-ai-service/model_store/.gitkeep
+!python-ai-service/dataset/.gitkeep
+
+# ==========================================
+# Go Ingestion Service
+# ==========================================
+# Binaries and compiled files
+/bin/
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+
+# Dependency directories
+vendor/
+
+# Go workspace file
+go.work
+go.work.sum
+
+# ==========================================
+# Docker / Infrastructure
+# ==========================================
+# Ignore local Kafka/Zookeeper/Elasticsearch data volumes if you map them
+docker-data/
+volumes/
