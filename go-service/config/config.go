@@ -11,8 +11,8 @@ type Config struct {
 func LoadConfig() *Config {
 	return &Config{
 		KafkaBroker: getEnv("KAFKA_BROKER", "localhost:9092"),
-		Topic:       getEnv("KAFKA_TOPIC", "logs"),
-		PythonAPI:   getEnv("PYTHON_API", "http://localhost:8000/analyze"),
+		Topic:       getEnv("KAFKA_TOPIC", "nlp-text-pipeline"),
+		PythonAPI:   getEnv("PYTHON_API", "http://localhost:8000/api/v1/analyze"),
 	}
 }
 
